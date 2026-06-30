@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #ffdde1,
+        #ee9ca7
+    );
+
+    color: white;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+.hero {
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.35)
+        ),
+        url('imagens/capa.jpeg');
+
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+button {
+    margin-top: 30px;
+
+    padding: 15px 35px;
+
+    border: none;
+    border-radius: 40px;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    background: white;
+    color: #d63384;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin: 15px;
+
+    max-width: 700px;
+}
+
+.contador {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.mensagem {
+    margin-top: 25px;
+    font-size: 1.4rem;
+    min-height: 120px;
+}
+
+.carousel {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 500px;
+
+    height: 500px;
+
+    margin: 20px auto;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+.slide {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+
+    opacity: 1;
+}
+
+.galeria img {
+    width: 250px;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    transition: 0.4s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+.coracao {
+
+    position: fixed;
+
+    bottom: -20px;
+
+    font-size: 20px;
+
+    animation: subir 8s linear forwards;
+
+    pointer-events: none;
+}
+
+@keyframes subir {
+
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+
+}
