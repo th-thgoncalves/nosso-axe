@@ -120,3 +120,17 @@ function trocarSlide() {
 }
 
 setInterval(trocarSlide, 4000);
+
+
+function comecar(){
+
+    const musica =
+        document.getElementById("musica");
+
+    musica.play();
+
+    document
+        .getElementById("telaInicial")
+        .classList.add("ocultar");
+
+}
